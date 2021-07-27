@@ -15,7 +15,8 @@ function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin }) 
     renderAs={renderAs}
     level={level}
     bgColor={bgColor}
-    fgColor={fgColor} />
+    fgColor={fgColor}
+    includeMargin={includeMargin} />
     </div>
   );
 }
@@ -37,9 +38,8 @@ App.defaultProps = {
   size: '1024',
   bgColor: 'transparent',
   fgColor: '#000',
-  Level: 'M',
+  level: 'M',
   includeMargin: false,
-  
 }
 
 export default App;
