@@ -1,6 +1,6 @@
 # Make QR Code Generator (React)
 
-A Make enpoint for https://github.com/zpao/qrcode.react
+A Make API template for https://github.com/zpao/qrcode.react
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
