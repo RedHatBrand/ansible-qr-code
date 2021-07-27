@@ -1,36 +1,45 @@
 import PropTypes from "prop-types";
 import './App.css';
-import Shapes from './components/shapes/shapes'
-import Logos from './components/logos/logos'
-import {ReactComponent as MakeLogo} from './logo.svg'
-import {ReactComponent as ReactLogo} from './react-logo.svg'
+var React = require('react');
+var QRCode = require('qrcode.react');
 
-function App({ headline, showLogos, backgroundImage }) {
+function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin }) {
   return (
-    <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
-      {showLogos && (
-        <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
-      )}
+    <div className="App" >
+      
 
-      <h1>{headline}</h1>
-
-      <div className="shape-container">
-        <Shapes />
-      </div>
+  <QRCode 
+    value={value}
+    renderAs={renderAs}
+    size={size}
+    renderAs={renderAs}
+    level={level}
+    bgColor={bgColor}
+    fgColor={fgColor} />
     </div>
   );
 }
 
 App.propTypes = {
-  headline: PropTypes.string,
-  showLogos: PropTypes.string,
-  backgroundImage: PropTypes.string,
+  value: PropTypes.string,
+  renderAs: PropTypes.string,
+  size: PropTypes.string,
+  bgColor: PropTypes.string,
+  fgColor: PropTypes.string,
+  level: PropTypes.string,
+  includeMargin: PropTypes.string,
+  
 }
 
 App.defaultProps = {
-  headline: 'Hello World',
-  showLogos: true,
-  backgroundImage: '',
+  value: 'http://make.cm',
+  renderAs: 'svg',
+  size: '1024',
+  bgColor: 'transparent',
+  fgColor: '#000',
+  Level: 'M',
+  includeMargin: false,
+  
 }
 
 export default App;
