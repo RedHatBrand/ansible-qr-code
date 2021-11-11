@@ -3,11 +3,16 @@ import './App.css';
 var React = require('react');
 var QRCode = require('qrcode.react');
 
-function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin, customLogo }) {
+function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin, customLogo, rounded }) {
   return (
-    <div className="App" >
-      
-      <div className="logo" style={{ backgroundImage: `url('${customLogo}')` }}> </div>
+
+
+
+      <div className={` App   ${rounded ? "rounded" : ""}  `}
+>
+      <div className="logo" style={{ backgroundImage: `url('${customLogo}');` }}> </div>
+
+
 
   <QRCode 
     value={value}
@@ -31,6 +36,7 @@ App.propTypes = {
   level: PropTypes.string,
   includeMargin: PropTypes.string,
   customLogo: PropTypes.string,
+  rounded: PropTypes.string,
   
 }
 
@@ -43,6 +49,7 @@ App.defaultProps = {
   level: 'M',
   customLogo: '',
   includeMargin: false,
+  rounded: false,
 }
 
 export default App;
