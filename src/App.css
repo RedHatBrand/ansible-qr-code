@@ -36,4 +36,4 @@ svg{max-width: 100vw;       }
 
 
 
-.rounded path:last-child{ filter: url('#goo2');  stroke-width:.35;}
+.rounded path{ filter: url('#goo2');  stroke-width:.35;}
