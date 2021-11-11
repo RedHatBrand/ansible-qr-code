@@ -8,9 +8,8 @@ function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin, cu
 
 
 
-      <div className={` App   ${rounded ? "rounded" : ""}  `}
->
-      <div className="logo" style={{ backgroundImage: `url('${customLogo}');` }}> </div>
+      <div className={` App   ${rounded ? "rounded" : ""}  `} >
+        
 
 
 
@@ -23,6 +22,9 @@ function App({ value, renderAs, size, bgColor, fgColor, level, includeMargin, cu
     bgColor={bgColor}
     fgColor={fgColor}
     includeMargin={includeMargin} />
+
+
+<div className="logo" style={{ backgroundImage: `url('${customLogo}')` , backgroundColor: `${bgColor}` }}>  </div>
     </div>
   );
 }
@@ -41,13 +43,13 @@ App.propTypes = {
 }
 
 App.defaultProps = {
-  value: 'http://make.cm',
+  value: 'https://make.cm',
   renderAs: 'svg',
   size: '1024',
   bgColor: 'transparent',
-  fgColor: '#000',
-  level: 'M',
   customLogo: '',
+  fgColor: '#000',
+  level: 'L',
   includeMargin: false,
   rounded: false,
 }
