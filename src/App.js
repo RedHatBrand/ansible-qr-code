@@ -58,7 +58,7 @@ App.defaultProps = {
   bgColor: 'transparent',
   logo: true,
   fgColor: '#000',
-  level: 'M',
+  level: 'H',
   includeMargin: false,
   rounded: false,
  
